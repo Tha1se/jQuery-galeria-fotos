@@ -56,6 +56,7 @@ ul{
 ul li{
     max-width: 25%;
     list-style:none;
+    padding: 3px;
     position: relative; /*Fixa o conteúdo junto ao 'elemento pai' */
     max-height: 280px;
     overflow-y: hidden; /*Todo o conteúdo que ultrapassar o limite definido (ex.: max-height 280px) será ajustado para caber. O "y" é porque se trata do eixo vertical que precisa ser ajustado*/
@@ -63,6 +64,7 @@ ul li{
 
 ul li img{
     width: 100%;
+    height: 100%;
 }
 
 .overlay-image-link{ /*Usamos o '.' para chamar a classe que criamos no HTML*/
