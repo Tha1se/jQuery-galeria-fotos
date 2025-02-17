@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #7c60b6;
+    padding: 16px 0; /*O primeiro valor configura os espaçamentos de cima e embaixo e o segundo valor configura os espaçamentos nas laterais.*/
+    color:#fff;
+    display: flex; /*Faz com que o botão "nova imagem" fique ao lado do título e não abaixo dele*/
+    border-bottom:16px solid #5e48be;
+    justify-content: center; /*Centraliza o conteúdo, neste caso, do header*/
+    text-transform: uppercase; 
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 16px;
+    text-align: center;
+    display:none; /*Faz com que o formulário, inicialmente, fique oculto*/
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+input,
+button{
+    padding: 8px;
+}
+
+button{
+    background-color: #009432;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+#botao-cancelar{ /*Para chamar a classe de IDs, usamos '#'*/
+    background-color: red;
+}
+
+ul{
+    display: flex; /*faz com que os elementos fiquem um ao lado do outro*/
+    flex-wrap: wrap; /*faz com que ao chegar no limite da linha, crie-se uma nova linha para adequar o conteúdo à página*/
+}
+
+ul li{
+    max-width: 25%;
+    list-style:none;
+    position: relative; /*Fixa o conteúdo junto ao 'elemento pai' */
+    max-height: 280px;
+    overflow-y: hidden; /*Todo o conteúdo que ultrapassar o limite definido (ex.: max-height 280px) será ajustado para caber. O "y" é porque se trata do eixo vertical que precisa ser ajustado*/
+}
+
+ul li img{
+    width: 100%;
+}
+
+.overlay-image-link{ /*Usamos o '.' para chamar a classe que criamos no HTML*/
+    padding: 16px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease 0.5s; /*faz o efeito de transição de opacidade do link aumentar/diminuir quando passa o mouse na imagem*/
+}
+
+.overlay-image-link a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .overlay-image-link{
+    opacity: 1;
+}
